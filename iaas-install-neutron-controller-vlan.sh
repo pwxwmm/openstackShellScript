@@ -36,7 +36,7 @@ crudini --set  /etc/neutron/plugins/ml2/openvswitch_agent.ini ovs bridge_mapping
 neutron-db-manage --service lbaas upgrade head
 neutron-db-manage --subproject neutron-fwaas upgrade head
 systemctl restart neutron-server neutron-lbaas-agent
-systemctl enabled neutron-server neutron-lbaas-agent
+systemctl enable neutron-server neutron-lbaas-agent
 
 systemctl restart neutron-openvswitch-agent
 systemctl restart neutron-l3-agent
