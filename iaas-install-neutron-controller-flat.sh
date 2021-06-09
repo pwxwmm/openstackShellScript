@@ -26,7 +26,7 @@ crudini --set /etc/neutron/lbaas_agent.ini haproxy user_group haproxy
 
 neutron-db-manage --service lbaas upgrade head
 systemctl restart neutron-server neutron-lbaas-agent
-systemctl enabled neutron-server neutron-lbaas-agent
+systemctl enable neutron-server neutron-lbaas-agent
 
 
 tenantID=`openstack project list | grep service | awk '{print $2}'`
